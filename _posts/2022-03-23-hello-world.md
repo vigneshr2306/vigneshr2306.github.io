@@ -1,11 +1,12 @@
 ---
 layout: post
 title: hello world
-date: 2022-03-25 23:13:27
+date: 2022-03-23 23:13:27
 description: trying to understand how to write blogs
 tags: understanding jekyll blogs
 categories: sample-posts
 ---
+
 # Hello World
 ## Mic test, hello? Hello?
 ### Can you hear me?

@@ -6,7 +6,6 @@ description: trying to understand how to write blogs
 tags: understanding jekyll blogs
 categories: sample-posts
 ---
-
 # Hello World
 ## Mic test, hello? Hello?
 ### Can you hear me?

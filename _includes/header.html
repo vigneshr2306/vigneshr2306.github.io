@@ -42,6 +42,13 @@
                   {%- endif -%}
                 </a>
               </li>
+              <li class="nav-item {% if page.url contains 'vitae' %}active{% endif %}">
+                <a class="nav-link" href="{{ '/assets/pdf/Sundar_CV.pdf' | relative_url }}">vitae
+                  {%- if page.title == "vitae" -%}
+                  <span class="sr-only">(current)</span>
+                  {%- endif -%}
+                </a>
+              </li>
               {%- endif %}
 
               <!-- Other pages -->
@@ -76,6 +83,7 @@
               {%- endif -%}
               {%- endif -%}
               {% endfor -%}
+              
               {%- if site.enable_darkmode %}
 
               <!-- Toogle theme mode -->

@@ -4,4 +4,5 @@ date: 2022-08-22 15:59:00-0400
 inline: true
 ---
 
-I'm looking for summer internships for Fall 2023! Please read my CV and reach me at my email. 
+I'm looking for summer internships for Fall 2023! :construction_worker:\
+Please read my [CV](/assets/pdf/Sundar_CV.pdf) and reach me at my [email](mailto:sundarsripada26@gmail.com). :e-mail:

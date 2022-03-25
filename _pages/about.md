@@ -15,9 +15,11 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Welcome to my personal website! My name is Sundar Sripada. I am passionate about research and engineering in the intersection of Robotics, Computer Vision and Deep Learning. Particularly, I am interested in applying engineering principles to enable and improve perception tasks in robots using learning-based approaches. 
+Welcome to my personal website! It's currently under construction, so check back later! :hammer: :wrench:
 
-Currently, I am an incoming graduate student to the MSE Electrical and Computer Engineering program in the Cockrell School of Engineering at The University of Texas at Austin. In the past, I've worked as a Research Intern at the [Robotics Research Center, IIIT - Hyderabad](https://robotics.iiit.ac.in/), and as a Summer Research Fellow in the [Department of Electrical Engineering, IIT - Madras](https://www.ee.iitm.ac.in/). In 2020, I completed my Bachelor's of Engineering in Electronics and Communication Engineering at [SSN College of Engineering](https://www.ssn.edu.in/) affiliated to [Anna University](https://www.annauniv.edu/). 
+My name is Sundar Sripada. I am passionate about research and engineering in the intersection of Robotics, Computer Vision and Deep Learning. Particularly, I am interested in applying learning-based principles to enable and improve perception tasks in robots. 
+
+I am an incoming Master's student to the [Department of Electrical and Computer Engineering](https://www.ece.utexas.edu/) at The University of Texas at Austin. In the past, I've worked as a Research Intern at the [Robotics Research Center, IIIT-Hyderabad](https://robotics.iiit.ac.in/), and as a Summer Research Fellow in the [Department of Electrical Engineering, IIT-Madras](https://www.ee.iitm.ac.in/). In 2020, I completed my Bachelor's of Engineering in Electronics and Communication Engineering at [SSN College of Engineering](https://www.ssn.edu.in/) affiliated to [Anna University](https://www.annauniv.edu/). 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

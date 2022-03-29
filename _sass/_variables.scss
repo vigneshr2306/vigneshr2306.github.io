@@ -8,6 +8,8 @@
 $red-color:           #FF3636 !default;
 $red-color-dark:      #B71C1C !default;
 $orange-color:        #F29105 !default;
+$coral-color-dark:    #ff4703 !default;
+$coral-color:         #ff7f50 !default;
 $blue-color:          #0076df !default;
 $blue-color-dark:     #00369f !default;
 $cyan-color:          #2698BA !default;
@@ -23,6 +25,7 @@ $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
+$grey-bg-color:       #323232 !default;
 $grey-color:          #828282 !default;
 $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;

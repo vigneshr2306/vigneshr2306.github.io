@@ -1,9 +1,9 @@
 ---
 layout: post
-title: hello world
+title: hello blogging world
 date: 2022-03-23 23:13:27
-description: trying to understand how to write blogs
-tags: understanding jekyll blogs
+description: trying to understand how to write blogs on jekyll
+tags: jekyll blogs
 categories: sample-posts
 ---
 

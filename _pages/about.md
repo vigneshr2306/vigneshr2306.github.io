@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: personalwebpagesolos/farewell.jpeg
+  image: profpic-solos/farewell.jpeg
   address: >
     Chennai, India
 
@@ -27,7 +27,7 @@ Some of my hobbies include: reading (mystery & sci-fi), writing (I'm new to blog
 
 ### <span style="color:#ff4703">research interests</span>
 
-I am passionate about research and engineering in the intersection of Robotics, Computer Vision and Deep Learning. Particularly, I am interested in applying learning-based principles to enable and improve perception tasks in robots (and other applications). I am also into decision-making in autonomous systems, specifically using Model Predictive Control or Reinforcement Learning. 
+I am passionate about research and engineering in the intersection of Robotics, Computer Vision and Deep Learning. Particularly, I'm interested in applying learning-based principles to enable and improve perception tasks in robots and other applications. I am also drawn towards decision-making in autonomous systems, specifically using Model Predictive Control or Reinforcement Learning. 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: ORB-SLAM2 on a Mobile Robot
-description: Deploying Monocular ORB-SLAM2 on a Mobile Robot
+title: ORB-SLAM2 Implementation
+description: Simulating Monocular ORB-SLAM2 using Rasbperry Pi
 img: assets/img/project-1_orbslam/2000feats.png
 importance: 1
 category: work

@@ -13,7 +13,7 @@ This project was done in association with the Medical Image Guidance (MIG) team 
 
 ## <span style="color:#ff4703">Objective</span>
 
-To calibrate a surgical drill bit (probe tip) using 3D-2D transformation.
+To calibrate a surgical drill bit (probe tip) using 3D-2D transformation to find the rotation matrix *$$R$$* and translation vector **$$t$$**. 
 
 ## <span style="color:#ff4703">Method</span>
 

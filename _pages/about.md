@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: profpic-solos/farewell.jpeg
+  image: profpic-solos/pondy.jpg
   address: >
     Chennai, India
 

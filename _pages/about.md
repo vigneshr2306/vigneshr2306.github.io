@@ -15,6 +15,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
+> :information_source: Info for Recruiters
+> 
+> Please check out my one-page resume on the top-right. Optionally, you can view a detailed curriculum vitae as well.
+
 ### <span style="color:#ff4703">short bio</span>
 
 Welcome to my personal website!

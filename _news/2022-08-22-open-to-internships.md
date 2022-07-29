@@ -5,4 +5,4 @@ inline: true
 ---
 
 I'm looking for summer internships for Summer 2023! :construction_worker:\
-Please read my [CV](/assets/pdf/Sundar_CV.pdf){:target="_blank"} and reach me at my [email](mailto:sundarsripada26@gmail.com). :e-mail:
+Please read my [resume](/assets/pdf/Sundar_Resume.pdf){:target="_blank"} or [CV](/assets/pdf/Sundar_CV.pdf){:target="_blank"} and reach me at my [email](mailto:sundarsripada26@gmail.com). :e-mail:

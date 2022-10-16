@@ -15,9 +15,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-<!-- > :information_source: Info for Recruiters
+> :information_source: Info for Recruiters
 >
-> Please check out my one-page resume on the top-right. Optionally, you can view a detailed curriculum vitae as well. -->
+> I am actively looking for full-time roles in the field of Computer Vision, Deep Learning & Robotics starting from Summer’23. Please check out my resume on the top-right of this page.
 
 ### <span style="color:#ff4703">short bio</span>
 
@@ -26,8 +26,6 @@ Welcome to my personal website!
 I am a Graduate ECE student at [Northeastern University](https://www.northeastern.edu/) specializing in Computer Vision, Machine Learning and Algorithms. In the past, I've worked as a Robotics & Advanced Development Intern at the [Vecna Robotics](https://www.vecnarobotics.com/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electrical and Electronics Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
 
 <!-- ### <span style="color:#ff4703">research interests</span> -->
-
-I am actively looking for full-time roles in the field of Computer Vision, Deep Learning & Robotics starting from Summer'23.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

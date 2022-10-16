@@ -23,15 +23,11 @@ social: true # includes social icons at the bottom of the page
 
 Welcome to my personal website!
 
-My name is Vignesh Ravikumar. My most popular nickname is Sippy. People also call me Sips, Sundu, Sun-Sun, Sunz, and my least favourite, Sundi (as it rhymes with an expletive in the Tamil Language).
-
-I am a Master's student at the [Department of Electrical and Computer Engineering](https://www.ece.utexas.edu/){:target="\_blank"} at [The University of Texas at Austin](https://www.utexas.edu/). In the past, I've worked as a Research Intern at the [Robotics Research Center, IIIT-Hyderabad](https://robotics.iiit.ac.in/){:target="\_blank"}, and as a Summer Research Fellow in the [Department of Electrical Engineering, IIT-Madras](https://www.ee.iitm.ac.in/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electronics and Communication Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
-
-Some of my hobbies include: reading (mystery & sci-fi), writing (I'm new to blogs!), tennis, and video games (mostly [Valorant](https://playvalorant.com/en-us/){:target="\_blank"}).
+I am a Graduate ECE student at [Northeastern University](https://www.northeastern.edu/) specializing in Computer Vision, Machine Learning and Algorithms. In the past, I've worked as a Robotics & Advanced Development Intern at the [Vecna Robotics](https://www.vecnarobotics.com/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electrical and Electronics Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
 
 ### <span style="color:#ff4703">research interests</span>
 
-I am passionate about research and engineering in the intersection of Robotics, Computer Vision and Deep Learning. Particularly, I'm interested in applying learning-based principles to enable and improve perception tasks in robots and other applications. I am also drawn towards decision-making in autonomous systems, specifically using Model Predictive Control or Reinforcement Learning.
+I am actively looking for full-time roles in the field of Computer Vision, Deep Learning & Robotics starting from Summer'23.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

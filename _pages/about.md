@@ -23,7 +23,7 @@ social: true # includes social icons at the bottom of the page
 
 Welcome to my personal website!
 
-I am a Graduate ECE student at [Northeastern University](https://www.northeastern.edu/) specializing in Computer Vision, Machine Learning and Algorithms. In the past, I've worked as a Robotics & Advanced Development Intern at the [Vecna Robotics](https://www.vecnarobotics.com/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electrical and Electronics Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
+I'm a Graduate ECE student at [Northeastern University](https://www.northeastern.edu/) specializing in Computer Vision, Machine Learning and Algorithms. In the past, I've worked as a Robotics & Advanced Development Intern at the [Vecna Robotics](https://www.vecnarobotics.com/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electrical and Electronics Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
 
 <!-- ### <span style="color:#ff4703">research interests</span> -->
 

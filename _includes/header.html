@@ -34,28 +34,28 @@
                 </a>
               </li>
               {% if site.blog_name %}
-              <!-- Blog -->
+              <!-- Blog
               <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/blog/' | relative_url }}">blog
                   {%- if page.title == "blog" -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
-              </li>
-              <li class="nav-item {% if page.url contains 'resume (one-page)' %}active{% endif %}">
-                <a class="nav-link" href="{{ '/assets/pdf/Sundar_Resume.pdf' | relative_url }}" target="_blank">resume (one-page)
+              </li> -->
+              <li class="nav-item {% if page.url contains 'resume' %}active{% endif %}">
+                <a class="nav-link" href="{{ '/assets/pdf/Vignesh_Ravikumar_Resume.pdf' | relative_url }}" target="_blank">resume (one-page)
                   {%- if page.title == "resume (one-page)" -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
               </li>
-              <li class="nav-item {% if page.url contains 'vitae' %}active{% endif %}">
+              <!-- <li class="nav-item {% if page.url contains 'vitae' %}active{% endif %}">
                 <a class="nav-link" href="{{ '/assets/pdf/Sundar_CV.pdf' | relative_url }}" target="_blank">vitae
                   {%- if page.title == "vitae" -%}
                   <span class="sr-only">(current)</span>
                   {%- endif -%}
                 </a>
-              </li>
+              </li> -->
               {%- endif %}
 
               <!-- Other pages -->

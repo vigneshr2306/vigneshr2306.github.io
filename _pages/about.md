@@ -10,14 +10,14 @@ profile:
   address: >
     Chennai, India
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-> :information_source: Info for Recruiters
+<!-- > :information_source: Info for Recruiters
 >
-> Please check out my one-page resume on the top-right. Optionally, you can view a detailed curriculum vitae as well.
+> Please check out my one-page resume on the top-right. Optionally, you can view a detailed curriculum vitae as well. -->
 
 ### <span style="color:#ff4703">short bio</span>
 
@@ -25,7 +25,7 @@ Welcome to my personal website!
 
 I am a Graduate ECE student at [Northeastern University](https://www.northeastern.edu/) specializing in Computer Vision, Machine Learning and Algorithms. In the past, I've worked as a Robotics & Advanced Development Intern at the [Vecna Robotics](https://www.vecnarobotics.com/){:target="\_blank"}. In 2020, I completed my Bachelor's of Engineering in Electrical and Electronics Engineering at [Anna University](https://www.annauniv.edu/){:target="\_blank"}.
 
-### <span style="color:#ff4703">research interests</span>
+<!-- ### <span style="color:#ff4703">research interests</span> -->
 
 I am actively looking for full-time roles in the field of Computer Vision, Deep Learning & Robotics starting from Summer'23.
 

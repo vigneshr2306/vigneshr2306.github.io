@@ -7,9 +7,11 @@ importance: 1
 category: work
 ---
 
+    {% include figure.html path="aassets/img/vecna.jpeg" title="autocharge" class="Autonomous docking of charger with an Autonomous Forklift" %}
+
 ### <span style="color:#ff4703">Acknowledgements</span>
 
-The project was part of my summer internship at [Vecna Robotics](https://www.vecnarobotics.com/) whee I worked as a Research & Advanced Development intern.
+The project was part of my summer internship at [Vecna Robotics](https://www.vecnarobotics.com/) where I worked as a Research & Advanced Development intern.
 
 ### <span style="color:#ff4703">Objective</span>
 
@@ -18,7 +20,9 @@ To simulate, test, and deploy monocular ORB-SLAM2 on a mobile robot using Raspbe
 ### <span style="color:#ff4703">Short Pipeline</span>
 
 <div class="row justify-content-sm-center">
-    {% include figure.html path="assets/img/project-1_orbslam/pipeline.png" title="example image" class="img-fluid rounded z-depth-1" %}
+
+[![Demonstration Video]( {% include figure.html path="assets/img/project-1_orbslam/pipeline.png" title="example image" class="img-fluid rounded z-depth-1" %})](https://youtu.be/MfdbfeNWv3E "Demonstration Video")
+
 </div>
 <div class="caption">
     <strong>Master-Slave Pipeline for Deployment.</strong> A video stream from the Pi Camera is chopped into images at regular intervals by a Slave Raspberry Pi 3B+. These images are sent to a Master Computer that publishes the image feed as a ROS topic. This is read by ORB-SLAM2's system which performs the necessary mapping and localization.

@@ -7,7 +7,13 @@ importance: 1
 category: work
 ---
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
     {% include figure.html path="aassets/img/vizodom.png" title="Visual Odometry using Stereo Images" class=" Visual Odometry using Stereo Images (Classical Computer Vision)" %}
+
+    </div>
+
+</div>
 
 <!-- ### <span style="color:#ff4703">Acknowledgements</span>
 

@@ -31,6 +31,6 @@ A robot that can charge an Autonomous Mobile Robot (AMR) automatically if it is 
 3. Various filter algorithms were used to denoise the sensor inputs and PWM signals were sent to the motor. <br />
 
 <div class="row justify-content-sm-center">
-[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/MfdbfeNWv3E)
+[<img src="https://img.youtube.com/vi/MfdbfeNWv3E/maxresdefault.jpg" width="50%">](https://youtu.be/MfdbfeNWv3E)
 
 </div>

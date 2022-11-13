@@ -7,9 +7,11 @@ importance: 1
 category: work
 ---
 
-<div class="row justify-content-sm-center">
-
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
     {% include figure.html path="aassets/img/vecna.jpeg" title="autocharge" class="Autonomous docking of charger with an Autonomous Forklift" %}
+
+    </div>
 
 </div>
 ### <span style="color:#ff4703">Acknowledgements</span>

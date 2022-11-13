@@ -7,11 +7,11 @@ importance: 1
 category: work
 ---
 
-### <span style="color:#ff4703">a</span>
+<!-- ### <span style="color:#ff4703">a</span> -->
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-    {% include figure.html path="aassets/img/vecna.png" title="autocharge" class="Autonomous docking of charger with an Autonomous Forklift" %}
+    {% include figure.html path="assets/img/vecna.png" title="autocharge" class="img-fluid rounded z-depth-1" %}
 
     </div>
 
@@ -32,5 +32,9 @@ A robot that can charge an Autonomous Mobile Robot (AMR) automatically if it is 
 
 <div class="row justify-content-sm-center">
 [<img src="https://img.youtube.com/vi/MfdbfeNWv3E/maxresdefault.jpg" width="50%">](https://youtu.be/MfdbfeNWv3E)
-
+<video src="https://youtu.be/MfdbfeNWv3E" width=180/>
+<!-- ![Game Process](https://github.com/Faizun-Faria/Thief-Robber-Landlord-Police/blob/main/Preview/gif_english.gif) -->
+<iframe width="420" height="315"
+src="https://youtu.be/MfdbfeNWv3E">
+</iframe>
 </div>

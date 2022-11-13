@@ -2,7 +2,7 @@
 layout: page
 title: AutoCharge
 description: Autonomous docking of charger with an Autonomous Forklift
-img: assets/img/vecna.jpeg
+img: assets/img/vecna.png
 importance: 1
 category: work
 ---
@@ -11,7 +11,7 @@ category: work
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-    {% include figure.html path="aassets/img/vecna.jpeg" title="autocharge" class="Autonomous docking of charger with an Autonomous Forklift" %}
+    {% include figure.html path="aassets/img/vecna.png" title="autocharge" class="Autonomous docking of charger with an Autonomous Forklift" %}
 
     </div>
 

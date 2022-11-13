@@ -7,7 +7,7 @@ importance: 1
 category: work
 ---
 
-### <span style="color:#ff4703"></span>
+### <span style="color:#ff4703">a</span>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -31,5 +31,6 @@ A robot that can charge an Autonomous Mobile Robot (AMR) automatically if it is 
 3. Various filter algorithms were used to denoise the sensor inputs and PWM signals were sent to the motor. <br />
 
 <div class="row justify-content-sm-center">
-https://youtu.be/MfdbfeNWv3E
+[<img src="https://img.youtube.com/vi/<VIDEO ID>/maxresdefault.jpg" width="50%">](https://youtu.be/MfdbfeNWv3E)
+
 </div>

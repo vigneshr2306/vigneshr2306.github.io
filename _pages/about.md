@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: profpic-solos/dp.jpeg
+  image: profpic-solos/vicky.jpg
   address: >
     Boston, MA
 

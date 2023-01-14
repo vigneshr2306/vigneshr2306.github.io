@@ -84,8 +84,8 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Sippy's Musings  # your blog must have a name for it to show up in the nav bar
-blog_description: "A motley of discussions on engineering, research, productivity, and life. Half of this is selfish; I love coming back to my own notes for later use. Some of this might actually be interesting (look for the #hmm tag)."
+blog_name: Paper Review  # your blog must have a name for it to show up in the nav bar
+blog_description: "A collection of cool papers that I read, and a brief review on them"
 permalink: /blog/:year/:title/
 
 # Pagination

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vignesh  Ravikumar | Group Normalization</title>
+    <meta name="author" content="Vignesh  Ravikumar" />
+    <meta name="description" content="Group Normalization Paper Review" />
+    <meta name="keywords" content="robotics, 3D computer vision, deep learning" />
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light" />
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://vigneshr2306.github.io/blog/2022/Group_Normalization/">
+    
+    <!-- Dark Mode -->
+    
+
+    <!-- Google Analytics -->
+    
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-224232394-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-224232394-1');
+</script>
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="https://vigneshr2306.github.io/"><span class="font-weight-bold" style="color: #03aaff">Vignesh</span>   Ravikumar</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/Vignesh_Ravikumar_Resume.pdf" target="_blank">resume</a>
+              </li>
+              <!-- <li class="nav-item ">
+                <a class="nav-link" href="/assets/pdf/Sundar_CV.pdf" target="_blank">vitae</a>
+              </li> -->
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Group Normalization</h1>
+    <p class="post-meta">October 7, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/paper-review">
+          <i class="fas fa-tag fa-sm"></i> paper-review</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>Citation: Wu, Yuxin &amp; He, Kaiming. (2018). Group Normalization, European Conference on Computer Vision.<br><br>
+Brief Summary:<br>
+This paper proposes a new type of normalization technique for deep neural networks called Group Normalization (GN), which involves computing the mean and variance for normalization based on dividing the channels into groups. This technique is advantageous compared to Batch Normalization (BN), where the same parameters were calculated based on dividing the samples into batches. The latter technique was not able to perform well with smaller batch sizes, which is where GN scores as it is not sensitive to batch sizes. GN performs better than BN in several tasks like segmentation, and detection, and on the ImageNet dataset trained with ResNet-50 architecture with a batch size of 2, GN has a 10.6% lower error rate compared to BN. <br><br>
+Main Contributions:<br>
+The idea of considering deep neural network features as structured vectors that can be grouped together.
+A novel normalization technique that beats the state-of-the-art normalization techniques with its lesser error rate.
+Independent to batch size helps in drastically reducing the error rates.
+Increases the pool of domains where normalization can be performed because of its adaptability to huge model-size applications.<br><br>
+Strengths:<br>
+Stable results were shown using Group Normalization with different batch sizes and datasets.
+Group Normalization can naturally transfer from pretraining to fine-tuning.
+The paper is well-written, with good structure, and is backed by several experimental results and figures.<br><br>
+Weakness:<br>
+The only weakness of this research work is that all the previous state-of-the-art models are tuned for BN, which makes GN less popular as it is difficult for tuning hyperparameters.<br><br>
+In-Depth Analysis of Strengths and Weaknesses:<br>
+The key idea behind Group Normalization is to not think of deep neural network features as unstructured vectors, but consider the corresponding channels of these features to be normalized together. The coefficients of these vectors can be interdependent; each group of channels is assumed to have a shared mean and variance, which leads to GN.<br>
+Since the grouping is done across the channels, GN is independent of batch size and can work relatively well with batch sizes as small as 2, to higher batch sizes as well. Due to this property, GNs are independent of batch size, which acts as a huge advantage compared to BN.<br>
+This independence to batch size opens a plethora of opportunities for GN to be implemented. There were heavy trade-offs between model size and batches in applications such as object detection, and segmentation, which was not the case with GNs. Hence, it was able to produce 10.6% lower error rates compared to BN in the ImageNet dataset.
+GNs have the ability to naturally change to fine-tuning from pre-training, even though they use different batch sizes. The results of GNs in this paper were stable and comprehensive, tested with different datasets and batch sizes, which will be explained in the next section.<br>
+Overall, the quality of the paper is good, with clear notations and enough experiments to support their hypothesis. The previous literature was clearly explained with intuitive figures which makes it easy to understand the paper.<br>
+Even though GN outperforms BN almost everywhere, BN is still the most popular choice in the industry for normalization, due to several state-of-the-art models and their hyperparameters tuned for BN, and the results of papers not being able to do fair comparisons otherwise.<br><br>
+Experimental Results:<br>
+In the Image Classification experiment in the ImageNet dataset with ResNet architecture, BN, GN, Layer Norm. (LN) and Instance Norm. (IN) were compared for batch sizes 2 to 32 with increments in powers of 2. It can be seen that for higher batch sizes like 32, the error rate of BN is better than GN and GN approaches BN with degradation of 0.5%. As batch size decreases, the error rate of GN improves significantly and achieves a 10.6% lower error rate than BN. Batch Renorm. is also compared with GN, but GN outperforms it by 2.1%. Experiments were also conducted with different number of groups and different channels per group and the results were compared with the ideal channel number which has the lowest error rate.<br><br>
+Using high-resolution images for Object Detection and Segmentation in the COCO dataset results in a lesser batch size; hence BN layer is linearized to a pre-computed frozen model called BN<em>. Mask R-CNN is used as a baseline, conv4 is used as a backbone, and the Average Precision (AP) is reported. It is seen that GN improves over BN</em> by 1.1 box AP and 0.8 mask AP. It is also trained on the FPN backbone, where the final ResNet-50 GN model is 2.2 points box AP and 1.6 points mask AP better than its BN* variant. Training in the Mask R-CNN from scratch, GN was able to achieve 41.0 box AP and 36.4 mask AP, which are the best results for the COCO dataset from scratch.
+In the Video Classification with Kinetics dataset, Inflated 3D (I3D) with ResNet-50 I3D baseline was used. Extending the normalization over the temporal axis, we train in the 400-class set with 32 and 64-frame input clips. For the batch size of 8 with 32 frame input, BN performs better than GN by 0.3% top-1 accuracy and 0.1% top-5. As batch size reduces to 4, BN’s accuracy is decreased by 1.2% while the GN remains the same. On the 64-frame input, GN’s accuracy is increased by 1.7% due to longer clip and temporal length, while BN’s accuracy reduces due to lesser batch size.<br><br>
+Extensions:<br>
+The applications of Group Normalization on generative models like GANs, sequential models like RNNs and LSTMs, and reinforcement learning models can be analyzed deeply, given their success in replacing Layer Normalization and Instance Normalization in visual recognition tasks. Additionally, there is scope for learning why BN outperforms GN in a few conditions. GN lacks the regularization ability of BN as BN computation involves stochastic batch sampling, which helps in regularization, and this can be analyzed with a regularizer added to GN to improve the results. <br><br>
+Comments:<br>
+Upon further research, I found that the extension mentioned in the previous section about the regularizer added with GN was employed in the Big Transfer (BiT): General Visual Representation Learning paper in 2019. Given the excellent performance of GN, I hope to see future models being tuned to GN, which will give better results, and help move deep learning research forward.</p>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2023 Vignesh  Ravikumar. 
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha256-l/1pMF/+J4TThfgARS6KwWrk/egwuVvhRzfLAMQ6Ds4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha256-SyTu6CwrfOhaznYZPoolVw2rxoY7lKYKQvqbtqN93HI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-224232394-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-224232394-1');
+  </script>
+  </body>
+</html>
+

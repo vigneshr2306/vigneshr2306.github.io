@@ -9,10 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vignesh  Ravikumar | blog</title>
+    <title>Vignesh  Ravikumar | Attention is all you need</title>
     <meta name="author" content="Vignesh  Ravikumar" />
-    <meta name="description" content="My personal webpage. 
-" />
+    <meta name="description" content="Attention is all you need Paper Review" />
     <meta name="keywords" content="robotics, 3D computer vision, deep learning" />
 
 
@@ -33,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://vigneshr2306.github.io/blog/">
+    <link rel="canonical" href="https://vigneshr2306.github.io/blog/2022/Attention/">
     
     <!-- Dark Mode -->
     
@@ -79,7 +78,7 @@
               
               <!-- Blog -->
               <li class="nav-item active">
-                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/blog/">blog</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/assets/pdf/Vignesh_Ravikumar_Resume.pdf" target="_blank">resume</a>
@@ -100,261 +99,55 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h2 style="color: #03aaff">Paper Review</h2>
-    <h5>A collection of cool papers that I read, and a brief review on them</h5>
-  </div>
+<div class="post">
 
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MAE/">Masked Autoencoders Are Scalable Vision Learners</a>
-        
-      </h3>
-      <p>Masked Autoencoders Are Scalable Vision Learners Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Attention is all you need</h1>
+    <p class="post-meta">October 7, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/paper-review">
+          <i class="fas fa-tag fa-sm"></i> paper-review</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <p>Citation: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems (NIPS’17).<br><br>
+Brief Summary:<br>
+Recurrent Neural Networks (RNN), Long Short Term Memory (LSTM) and Sequence Sequence Models are popular approaches to solving tasks such as Image Captioning, Langage Translation, etc. However, they deal with the input in a sequential manner, which is often time-consuming and does not use the parallel processing power of modern computing techniques. Sequential data processing also has the disadvantages of the popular vanishing gradient problem when the sequence is too long. This paper solves these issues by proposing a novel architecture called the Transformer, which is solely based on attention mechanisms. The architecture uses an encoder-decoder model with I/O embedding and positional encoding layers. The Multi-Headed Attention and Masked Multi-Headed Attention layers allow dependency modeling without considering their distance in the input or output sequences. The model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task.<br><br></p>
 
-    
-    
-    
-    
+<p>Main Contributions:<br>
+The recurrent layers most frequently employed in encoder-decoder designs are replaced with multi-headed self-attention in this study, which is the first transduction model based purely on attention.
+The paper achieves state-of-the-art results in language translation tasks and paved the way for future research in this field for papers such as BERT and ViT.<br><br>
+Strengths:<br>
+The transformer can be trained significantly faster than architectures based on recurrent or convolutional layers for translation tasks.
+In situations when the sequence length is less than the representation dimensionality, self-attention layers perform faster than recurrent layers. <br>
+The paper is well-written and easy to read. The code is provided which helps in reproducing the results for further research.<br><br>
+Weakness:<br>
+The paper lacks mathematical explanation in parts such as multi-headed attention.<br>
+The model contains too many hyperparameters, without tests for significant configurations.<br>
+The paper also lacks figures and graphs that could help analyze the results better.<br><br></p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MVitv2/">MViTv2 Improved multiscale vision transformers for classification and detection</a>
-        
-      </h3>
-      <p>MViTv2 Improved multiscale vision transformers for classification and detection Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p>In-Depth Analysis of Strengths and Weaknesses:<br>
+RNNs and LSTMs are usually employed for tasks such as image captioning, which consists of recurrent layers. This is replaced with multi-headed self-attention, which is the first transduction model based purely on attention. This block is used to give the word embedding inputs more contextual information. A self-attention module functions by reweighing the word embeddings of each word to account for contextual importance and comparing each word in the phrase to every other word in the sentence, including itself. The algorithm receives N word embeddings without context and outputs N word embeddings with context. <br>
+The model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, which beats state-of-the-art results. The paper is also well written, with code provided for reproducibility, which is the reason that led to revolutionizing the industry with several transformer-like architectures.<br>
+The transformers can take in parallel inputs, which helps in using the modern GPU parallel processing power. This makes transformers train several times faster than LSTMs. Even though LSTMs are used to avoid vanishing gradient problems, when the sequential input is too long, there exists a vanishing gradient, and this can be avoided using transformers as they process the inputs in parallel.<br>
+As for the weakness of the paper is concerned, the paper consists of several hyperparameters, but the significance of the configurations could have been explained better. The authors could have also added some more mathematical explanations on the multi-headed attention part.<br><br>
+Experimental Results:<br>
+The Adam optimizer was used to train the design, and the learning rate was first raised and then reduced. In order to avoid overfitting, residual dropout was employed as a regularization strategy. Label smoothing was also utilized so that the model gradually learns to be more uncertain, improving accuracy as a result of more data-driven learning.<br>
+The transformer model performs better than the previous state-of-the-art by over 2 BLEU in the English-to-German translation, with a score of 28.4. The training was done for 3.5 days on 8 P100 GPUs. For the English-to-French translation, the BLEU score turned out to be 41.0. <br>
+Different model variations are done on the model to evaluate different parts of the transformer. It is observed that reducing the attention key size reduces model quality. It is also seen that bigger models are better, and dropout is very helpful in avoiding over-fitting.<br><br>
+Extensions:<br>
+The transformer model that is explained in this paper has been tested only with machine translation models. This can be extended to applications such as image, audio, and video processing. <br><br>
+Comments:<br>
+In fact, the state-of-the-art in object detection and image segmentation in the industry uses transformers in it. This would not have been possible without this paper, and hence shows how much this paper has impacted the development of this field.</p>
 
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/FCOS/">FCOS Fully Convolutional One-Stage Object Detection</a>
-        
-      </h3>
-      <p>FCOS Fully Convolutional One-Stage Object Detection Paper Review</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        October 27, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/RNN/">Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring</a>
-        
-      </h3>
-      <p>Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 13, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Attention/">Attention is all you need</a>
-        
-      </h3>
-      <p>Attention is all you need Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Group_Normalization/">Group Normalization</a>
-        
-      </h3>
-      <p>Group Normalization Paper Review</p>
-      <p class="post-meta"> 7 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Alexnet/">AlexNet</a>
-        
-      </h3>
-      <p>AlexNet Paper Review</p>
-      <p class="post-meta"> 6 min read &nbsp; &middot; &nbsp;
-        September 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  <nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li><li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
+  </article>
 
 </div>
 
@@ -363,7 +156,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2023 Vignesh  Ravikumar. 
+        © Copyright 2023 Vignesh  Ravikumar. 
       </div>
     </footer>
 

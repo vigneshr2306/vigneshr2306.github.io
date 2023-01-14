@@ -9,10 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vignesh  Ravikumar | blog</title>
+    <title>Vignesh  Ravikumar | Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring</title>
     <meta name="author" content="Vignesh  Ravikumar" />
-    <meta name="description" content="My personal webpage. 
-" />
+    <meta name="description" content="Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring Paper Review" />
     <meta name="keywords" content="robotics, 3D computer vision, deep learning" />
 
 
@@ -33,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://vigneshr2306.github.io/blog/">
+    <link rel="canonical" href="https://vigneshr2306.github.io/blog/2022/RNN/">
     
     <!-- Dark Mode -->
     
@@ -79,7 +78,7 @@
               
               <!-- Blog -->
               <li class="nav-item active">
-                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/blog/">blog</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/assets/pdf/Vignesh_Ravikumar_Resume.pdf" target="_blank">resume</a>
@@ -100,261 +99,60 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h2 style="color: #03aaff">Paper Review</h2>
-    <h5>A collection of cool papers that I read, and a brief review on them</h5>
-  </div>
+<div class="post">
 
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MAE/">Masked Autoencoders Are Scalable Vision Learners</a>
-        
-      </h3>
-      <p>Masked Autoencoders Are Scalable Vision Learners Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring</h1>
+    <p class="post-meta">October 13, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/paper-review">
+          <i class="fas fa-tag fa-sm"></i> paper-review</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <p>Citation: S. Nah, S. Son, and K. M. Lee, “Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring,” 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2019, pp. 8094-8103, doi: 10.1109/CVPR.2019.00829. <br><br>
+Brief Summary:<br>
+This paper suggests a novel video deblurring method that beats the state-of-the-art performance using Recurrent Neural Networks (RNN). This real-time deblurring method exploits the temporal relationship between the past frame and the current frame to improve the accuracy of the model. This method does not use any additional modules, which helps in updating the weights of the iterative model in a stochastic manner. Experimental results on the GOPRO dataset show the Peak Signal-to-Noise Ratio to be 29.97.<br><br></p>
 
-    
-    
-    
-    
+<p>Main Contributions:<br>
+The model produces better results without modifying the architecture by updating the hidden states multiple times internally during a single time step.<br>
+More optimal hidden state update strategies such as partial recurrence and different types of intra-frame iteration strategies are explained clearly.<br>
+The data term in the loss function minimizes the restoration error and a prior term that favors a shorter computation path.<br>
+The deblurring accuracy and the computational efficiency beats the state-of-the-art models. This can be inferred from the experimental results in GOPRO dataset.<br><br>
+Strengths:<br>
+Exploits both inter-frame and intra-frame recurrent schemes which are simple yet effective.<br>
+The previous literature is explained comprehensively, which gives good background knowledge about deblurring to the reader.<br>
+Strong experimental results and algorithms help in understanding the concept clearly.<br>
+The figures and tables used in the paper convey the technical work intuitively.<br><br>
+Weakness:<br>
+The paper does not contain code resources for reproducing the results.
+The captioning of the figures is not clear and the paper contains many grammatical errors.
+The paper heavily relies on abbreviations which might confuse the readers.<br><br></p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MVitv2/">MViTv2 Improved multiscale vision transformers for classification and detection</a>
-        
-      </h3>
-      <p>MViTv2 Improved multiscale vision transformers for classification and detection Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p>In-Depth Analysis of Strengths and Weaknesses:<br>
+The main strength of the paper is to exploit the temporal relationship between neighboring frames to improve the accuracy of the deblurring model. The single-cell and dual-cell approaches differ in which parameters are used for updating the hidden states. The former uses the same parameters to estimate both the initial hidden state and the updated hidden state, while the latter uses two RNN cells where the second cell is used to update the hidden states and predict latent frames. <br>
+The previous literature on video deblurring, burst deblurring, and stochastic neural networks was comprehensively explained. The experimental results on the GOPRO dataset and Deep video deblurring for the hand-held camera dataset were solid, which is explained in the next section.<br>
+Even though the paper has several strengths, it has some major flaws. The inability to reproduce the results without coding resources is difficult for researchers to further improve on the same line of research. Additionally, the presence of grammatical errors and confusing abbreviations make the paper less readable.<br><br></p>
 
-          
+<p>Experimental Results:<br>
+The experiments were conducted on the GOPRO dataset with 2103 training samples from 22 sequences, and 1111 evaluation samples from 11 sequences. From this dataset, blur and sharp image pairs were generated. The original video resolution was downsampled from 1280 × 720 to 960 × 540 before averaging to suppress the noise and video compression artifacts. All the models are implemented using PyTorch 0.4.1, which was created with CUDA 9.2 and cuDNN 7.1, on NVIDIA GTX 1080 Ti GPUs. Another dataset consisting of 61 sequences containing 5708 training pairs and 10 sequences including 1000 evaluation pairs was synthesized from 240fps videos. PSNR and SSIM were used to evaluate the models. <br>
+Comparisons on GOPRO Dataset: <br>
+In the GOPRO dataset, they achieved a deblurring accuracy of 29.97 PSNR and 0.8947 SSIM. This result is better than the existing state-of-the-art, and this improved result is due to the proposed intra-frame iteration scheme and the stochastic training methods.<br>
+Comparisons on Deep video deblurring for hand-held cameras Dataset and Real Videos:<br>
+For this dataset, the deblurring accuracy was 30.80 PSNR and 0.8991 SSIM. The result on real videos clarifies blurred textures.<br><br>
+Extensions:<br>
+The architecture of this model can be further improved by the latest architectures such as Long Short Term Memory (LSTM) and transformers. <br><br>
+Comments:<br>
+This paper paves way for research in image deblurring that can be used in applications such as medical imaging, microscopy, remote sensing, and planetary imaging.</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/FCOS/">FCOS Fully Convolutional One-Stage Object Detection</a>
-        
-      </h3>
-      <p>FCOS Fully Convolutional One-Stage Object Detection Paper Review</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        October 27, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/RNN/">Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring</a>
-        
-      </h3>
-      <p>Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 13, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Attention/">Attention is all you need</a>
-        
-      </h3>
-      <p>Attention is all you need Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Group_Normalization/">Group Normalization</a>
-        
-      </h3>
-      <p>Group Normalization Paper Review</p>
-      <p class="post-meta"> 7 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Alexnet/">AlexNet</a>
-        
-      </h3>
-      <p>AlexNet Paper Review</p>
-      <p class="post-meta"> 6 min read &nbsp; &middot; &nbsp;
-        September 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  <nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li><li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
+  </article>
 
 </div>
 
@@ -363,7 +161,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2023 Vignesh  Ravikumar. 
+        © Copyright 2023 Vignesh  Ravikumar. 
       </div>
     </footer>
 

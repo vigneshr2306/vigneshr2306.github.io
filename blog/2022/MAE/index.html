@@ -9,10 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Vignesh  Ravikumar | blog</title>
+    <title>Vignesh  Ravikumar | Masked Autoencoders Are Scalable Vision Learners</title>
     <meta name="author" content="Vignesh  Ravikumar" />
-    <meta name="description" content="My personal webpage. 
-" />
+    <meta name="description" content="Masked Autoencoders Are Scalable Vision Learners Paper Review" />
     <meta name="keywords" content="robotics, 3D computer vision, deep learning" />
 
 
@@ -33,7 +32,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://vigneshr2306.github.io/blog/">
+    <link rel="canonical" href="https://vigneshr2306.github.io/blog/2022/MAE/">
     
     <!-- Dark Mode -->
     
@@ -79,7 +78,7 @@
               
               <!-- Blog -->
               <li class="nav-item active">
-                <a class="nav-link" href="/blog/">blog<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/blog/">blog</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/assets/pdf/Vignesh_Ravikumar_Resume.pdf" target="_blank">resume</a>
@@ -100,261 +99,59 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <div class="post">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h2 style="color: #03aaff">Paper Review</h2>
-    <h5>A collection of cool papers that I read, and a brief review on them</h5>
-  </div>
+<div class="post">
 
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MAE/">Masked Autoencoders Are Scalable Vision Learners</a>
-        
-      </h3>
-      <p>Masked Autoencoders Are Scalable Vision Learners Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Masked Autoencoders Are Scalable Vision Learners</h1>
+    <p class="post-meta">November 4, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/paper-review">
+          <i class="fas fa-tag fa-sm"></i> paper-review</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <p>Citation: He, Kaiming et al. “Masked Autoencoders Are Scalable Vision Learners.” 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) (2022): 15979-15988. <br><br>
+Brief Summary:<br>
+An autoencoder is used to learn efficient coding of unlabeled data. By making an attempt to regenerate the input from the encoding, the encoding is validated and improved. By teaching the network to disregard irrelevant data (or “noise”), the autoencoder learns a representation (encoding) for a set of data, generally for dimensionality reduction. This paper introduces Masked Autoencoders where random patches of the input images are masked and the rebuilding is done on the missing pixels. On a standard ViT-Huge model calibrated on ImageNet-1K, they use this scalable self-supervised architecture and obtain 87.8% accuracy with a 3X shorter pre-training time, making MAE scalable for huge models.<br><br></p>
 
-    
-    
-    
-    
+<p>Main Contributions:<br>
+An asymmetric architecture that enables the encoder to work solely on the partial, seen signal (without mask tokens) and use a lightweight decoder that reconstructs the entire signal from the latent representation and the mask tokens.
+Masking the majority of inputs generates a nontrivial and meaningful self-supervisory task.<br><br>
+Strengths:<br>
+This paper leverages on Vision Transformer’s ability to bridge the architectural gap that CNNs were possessing - ability to integrate mask tokens which were not possible on CNNs.
+The concept is very scalable and simple to deploy.
+The paper is well-written; the code is provided for reproducibility, and has enough mathematical explanations and supporting figures.<br><br>
+Weakness:<br>
+There is no mathematical formulation or justification for their method.</p>
 
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/MVitv2/">MViTv2 Improved multiscale vision transformers for classification and detection</a>
-        
-      </h3>
-      <p>MViTv2 Improved multiscale vision transformers for classification and detection Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        November 4, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p>In-Depth Analysis of Strengths and Weaknesses:<br>
+The suggested MAE in this study is a straightforward autoencoder that makes full use of partial observation (the input picture is incomplete) to produce a complete image. With the exception of its unique asymmetric architecture, this autoencoder is nearly identical to other earlier (classical) autoencoders. The model can avoid training on every pixel in the image thanks to this approach.
+Masking the majority of inputs generates a nontrivial and meaningful self-supervisory task. The success of both designs, as previously indicated, demonstrates our ability to train our models with big train datasets successfully and efficiently. It indicates that the accuracy has increased and that acceleration training has sped up by at least three times. This scalable approach makes it viable for learning high-capacity models that generalize well (this can be seen in experiment results).
+However, the paper does not provide enough mathematical formulations or justifications for their method.<br><br>
+Experimental Results:<br>
+Ablation studies were performed on several parts of the architecture such as masking ratio, decoder design, mask token, reconstruction target, data augmentation, mask sampling strategy, and training schedule. <br>
+Comparisons with previous results:<br><br>
+Comparisons with self-supervised methods: This study reveals that MAE is readily scaled up and exhibits consistent progress with larger models. ViT-H provides 86.9% accuracy for MAE (224 size). A 448 size is used for fine-tuning, which results in 87.8% accuracy. BEiT performs worse than MAE despite being faster and simpler to use.
+Comparisons with supervised pre-training: When trained in IN1K, ViT-L degrades, but MAE performs better, and accuracy reaches saturation. MAE performs better with models of greater capacity.<br>
+Partial Fine-tuning: Results from probing and fine-tuning are mostly uncorrelated. Only one Transformer block has to be fine-tuned in order to considerably increase accuracy from 73.5% to 81.0%. When compared to MAE, MoCo v3 has a greater linear probing accuracy, but all of its partial fine-tuning outcomes are inferior to those of MAE. When four blocks are tuned, the gap is 2.6%.<br>
+Transfer Learning Experiments:
+Object detection and segmentation: MAE outperforms supervised, MoCo v3 and BEiT with an APbox of 50.3 for ViT-B and 53.3 for ViT-L. The token-based BEiT is inferior to or on par with the pixel-based MAE, which is also more quicker and easier to use.<br>
+Semantic segmentation: Results from pre-training are substantially better than from supervised pre training. The MAE based on pixels surpasses the BEiT based on tokens.<br>
+Classification task: The study technique exhibits strong scaling behavior on iNat. With larger models, accuracy increases noticeably and outperforms the prior best results by a wide margin.<br>
+Pixels vs. tokens: A study demonstrates that tokenization is not required for MAE since the use of dVAE tokens, while superior to unnormalized pixels in certain circumstances, is statistically equivalent to using normalized pixels in all cases.<br><br>
+Extensions:<br>
+Dimensionality reduction, image compression, image denoising, feature extraction, sequence-to-sequence prediction, and recommendation systems are other applications for MAE.<br><br>
+Comments:<br>
+In real-world computer vision tasks, this initiative technique is advantageous and useful, particularly for difficult problems with complexity. The model uses less energy and requires fewer inputs for pre-training by removing random patches.</p>
 
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/FCOS/">FCOS Fully Convolutional One-Stage Object Detection</a>
-        
-      </h3>
-      <p>FCOS Fully Convolutional One-Stage Object Detection Paper Review</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        October 27, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/RNN/">Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring</a>
-        
-      </h3>
-      <p>Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 13, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Attention/">Attention is all you need</a>
-        
-      </h3>
-      <p>Attention is all you need Paper Review</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Group_Normalization/">Group Normalization</a>
-        
-      </h3>
-      <p>Group Normalization Paper Review</p>
-      <p class="post-meta"> 7 min read &nbsp; &middot; &nbsp;
-        October 7, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3>
-        
-          <a class="post-title" href="/blog/2022/Alexnet/">AlexNet</a>
-        
-      </h3>
-      <p>AlexNet Paper Review</p>
-      <p class="post-meta"> 6 min read &nbsp; &middot; &nbsp;
-        September 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/paper-review">
-              <i class="fas fa-tag fa-sm"></i> paper-review</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  <nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li><li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
+  </article>
 
 </div>
 
@@ -363,7 +160,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2023 Vignesh  Ravikumar. 
+        © Copyright 2023 Vignesh  Ravikumar. 
       </div>
     </footer>
 

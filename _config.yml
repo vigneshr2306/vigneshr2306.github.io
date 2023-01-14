@@ -19,7 +19,7 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://vigneshr2306.github.io # the base hostname & protocol for your site
-baseurl: # the subpath of your site, e.g. /blog/
+baseurl: /blog/:year/:title/ # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
@@ -87,6 +87,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 blog_name: Paper Review  # your blog must have a name for it to show up in the nav bar
 blog_description: "A collection of cool papers that I read, and a brief review on them"
 permalink: /blog/:year/:title/
+# permalink: /_posts/
 
 # Pagination
 pagination:
@@ -133,6 +134,7 @@ kramdown:
 
 # Includes & excludes
 include: ['_pages']
+# include: ['_posts']
 exclude:
   - bin
   - Gemfile

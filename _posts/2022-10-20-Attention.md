@@ -3,8 +3,8 @@ layout: post
 title: Attention is all you need
 date: 2022-10-07 23:13:27
 description: Attention is all you need Paper Review
-# tags: CV DL
-categories: paper-review
+tags: jekyll blogs
+categories: sample-posts
 ---
 
 Citation: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. In Proceedings of the 31st International Conference on Neural Information Processing Systems (NIPS'17).<br /><br />

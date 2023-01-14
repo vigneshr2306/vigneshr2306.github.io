@@ -3,8 +3,8 @@ layout: post
 title: Group Normalization
 date: 2022-10-07 23:13:27
 description: Group Normalization Paper Review
-# tags: CV DL
-categories: paper-review
+tags: jekyll blogs
+categories: sample-posts
 ---
 
 Citation: Wu, Yuxin & He, Kaiming. (2018). Group Normalization, European Conference on Computer Vision.<br /><br />

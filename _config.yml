@@ -87,7 +87,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 blog_name: Paper Review  # your blog must have a name for it to show up in the nav bar
 blog_description: "A collection of cool papers that I read, and a brief review on them"
 permalink: /blog/:year/:title/
-# permalink: /_posts/
+
 
 # Pagination
 pagination:
